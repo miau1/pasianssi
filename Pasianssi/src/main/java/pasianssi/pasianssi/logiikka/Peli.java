@@ -29,18 +29,38 @@ public class Peli {
         }
     }
 
+    /**
+     * Palauttaa alkupakan.
+     * 
+     * @return Alkupakka.
+     */
     public Pakka getAlku() {
         return alku;
     }
 
+    /**
+     * Palauttaa kaantopakan.
+     * 
+     * @return Kaantopakka.
+     */
     public Pakka getKaanto() {
         return kaanto;
     }
 
+    /**
+     * Palauttaa alapakat.
+     * 
+     * @return Alapakat.
+     */
     public Pakka[] getAlapakat() {
         return alapakat;
     }
 
+    /**
+     * Palauttaa yläpakat.
+     * 
+     * @return Yläpakat.
+     */
     public Pakka[] getYlapakat() {
         return ylapakat;
     }
@@ -143,10 +163,10 @@ public class Peli {
     private void siirraKorttiYla(Pakka mista, Pakka mihin) {
         Kortti kor = mista.poistaKortti();
         if ((mihin.koko() == 0 && kor.getNumero() == 1)) {
-            this.sKYapu(mihin, mista, kor);
+            this.sKYapu(mista, mihin, kor);
         } else if (mihin.koko() > 0 && kor.getNumero() - mihin.paallimmainen().getNumero() == 1
                 && kor.getMaa() == mihin.paallimmainen().getMaa()) {
-            this.sKYapu(mihin, mista, kor);
+            this.sKYapu(mista, mihin, kor);
         } else {
             mista.lisaaKortti(kor);
         }
@@ -160,7 +180,7 @@ public class Peli {
      * @param mista Pakka, johon siirretään.
      * @param kor Kortti, joka siirretään.
      */
-    private void sKYapu(Pakka mihin, Pakka mista, Kortti kor) {
+    private void sKYapu(Pakka mista, Pakka mihin, Kortti kor) {
         mihin.lisaaKortti(kor);
         if (mista.getTunnus() == 3) {
             mista.kaannaPaallimmainen();
