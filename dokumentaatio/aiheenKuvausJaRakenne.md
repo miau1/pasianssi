@@ -13,3 +13,7 @@ Toteutetaan pasianssikorttipeli. Toteutetaan ainakin tavallinen klondike-pasians
 * parhaiden tulosten tarkastelu
 * pelattujen pelien tarkastelu
 * pelin ohjeiden tarkastelu
+
+**Luokkakaavio:**
+
+![Alt text](/home/mikko/Lataukset/pasianssi_luokkakaavio.png)
