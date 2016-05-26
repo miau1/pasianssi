@@ -4,7 +4,7 @@ Pasianssikorttipeli, jossa voi pelata tavallisen klondiken lisäksi myös muita 
 
 ## Dokumentaatio
 
-[Aiheen kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md)
-[Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
-[pit-raportti](dokumentaatio/pit/201605251415)
-[Checkstyle-raportti](dokumentaatio/site)
+* [Aiheen kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md)
+* [Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
+* [pit-raportti](dokumentaatio/pit/201605251415)
+* [Checkstyle-raportti](dokumentaatio/site)

@@ -1,4 +1,5 @@
 **Aihe:** pasianssi
+
 Toteutetaan pasianssikorttipeli. Toteutetaan ainakin tavallinen klondike-pasianssi ja sen lisäksi myös mahdollisesti muita pasiansseja. Pelille voi valita vaikeustason. Vaikeustaso voisi määrittää esimerkiksi, kuinka monta korttia vedetään kerralla pakasta tai kuinka monta kertaa pakka voi mennä ympäri. Kun aloitetaan uusi peli, ohjelma alustaa pasianssin sekoitetulla korttipakalla. Pelaaja pystyy siirtämään kortteja toistensa päälle, jos ne sopivat päällekäin. Pelaaja voittaa pelin, jos kaikki kortit on siirretty yläpakkoihin. Toteutetaan parhaiden tulosten kirjanpito. Parhaat tulokset tallenetaan pelin läpäisynopeuden tai jonkinlaisen pistesysteemin perusteella. Sovelluksessa voi myös tarkastella kaikkien pelattujen ja voittetujen pelien määrää. Sovellus sisältää myös ohjeet jokaiselle toteutetulle pasianssille.
 
 **Käyttäjät:** Pelaaja
@@ -16,4 +17,4 @@ Toteutetaan pasianssikorttipeli. Toteutetaan ainakin tavallinen klondike-pasians
 
 **Luokkakaavio:**
 
-![Alt text](/home/mikko/Lataukset/pasianssi_luokkakaavio.png)
+![Alt text](/dokumentaatio/pasianssi_luokkakaavio.png)
