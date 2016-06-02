@@ -125,4 +125,25 @@ public class Pakka {
         }
         return null;
     }
+
+    /**
+     * Palauttaa kopiopakan pakan päällä olevista kuvapuoli ylöspäin olevista
+     * korteista.
+     *
+     * @return Pakka.
+     */
+    public Pakka oikeinPainOlevat() {
+        Pakka apu = new Pakka(5);
+        Pakka kopio = new Pakka(5);
+        int n = this.koko();
+        for (int i = 0; i < n; i++) {
+            if (this.paallimmainen().getPuoli() == 1) {
+                Kortti k = this.poistaKortti();
+                apu.lisaaKortti(k);
+            }
+        }
+        kopio.kortit = (Stack<Kortti>) apu.getKortit().clone();
+        this.lisaaKortteja(apu);
+        return kopio;
+    }
 }

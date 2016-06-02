@@ -5,3 +5,5 @@ Päivä | Tunnit | Kuvaus
 23.05.2016 | 5h | Ohjelmoinnin aloittaminen
 24.05.2016 | 7h | Ohjelmointia + testien tekemistä
 25.05.2016 | 5h | Testejä, pit, checkstyle, luokkakaavio
+01.06.2016 | 10h | Teksikäyttöliittymän teko ja logiikan täydennystä
+02.06.2016 | 6h | Testien täydennystä ja dokumentaation päivitys

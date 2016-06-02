@@ -124,4 +124,33 @@ public class PakkaTest {
         }
         assertEquals(true, ret);
     }
+
+    @Test
+    public void oikeinPainOlevatPalauttaaVainOikeinPainOlevat() {
+        p.lisaaKortti(new Kortti(1, 1));
+        Pakka p2 = p.oikeinPainOlevat();
+        assertEquals(0, p2.koko());
+        p.kaannaPaallimmainen();
+        p2 = p.oikeinPainOlevat();
+        assertEquals(1, p2.koko());
+        p.kaannaPaallimmainen();
+        p.lisaaKortti(new Kortti(2, 2));
+        p.kaannaPaallimmainen();
+        p.lisaaKortti(new Kortti(3, 3));
+        p.kaannaPaallimmainen();
+        p2 = p.oikeinPainOlevat();
+        assertEquals(2, p2.koko());
+    }
+
+    @Test
+    public void oikeinPainOlevatEiMuutaAlkuperaisenPakanKokoa() {
+        p.lisaaKortti(new Kortti(1, 1));
+        p.lisaaKortti(new Kortti(2, 2));
+        p.kaannaPaallimmainen();
+        p.lisaaKortti(new Kortti(3, 3));
+        p.kaannaPaallimmainen();
+        Pakka p2 = p.oikeinPainOlevat();
+        assertEquals(2, p2.koko());
+        assertEquals(3, p.koko());
+    }
 }

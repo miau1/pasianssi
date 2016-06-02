@@ -17,4 +17,4 @@ Toteutetaan pasianssikorttipeli. Toteutetaan ainakin tavallinen klondike-pasians
 
 **Luokkakaavio:**
 
-![Alt text](/dokumentaatio/pasianssi_luokkakaavio.png)
+![Alt text](/dokumentaatio/pasianssi_luokkakaavio.jpg)
