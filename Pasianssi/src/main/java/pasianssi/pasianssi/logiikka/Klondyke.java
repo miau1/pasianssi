@@ -43,6 +43,14 @@ public class Klondyke extends Peli {
     }
 
     /**
+     * Alustaa alkupakan ja alapakat.
+     */
+    public void alustaPeli() {
+        this.alustaAlkupakka();
+        this.alustaAlapakat();
+    }
+    
+    /**
      * Alustaa 7 alapakkaa jakamalla niihin 1-7 korttia järjestyksessä, ja
      * kääntää pakkojen päällimmäiset kortit kuvapuoli ylöspäin.
      */

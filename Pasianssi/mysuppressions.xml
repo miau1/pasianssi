@@ -7,5 +7,6 @@
 <suppressions>
     <suppress files="Main.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="Teksti.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="PasianssiUI.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>
   

@@ -7,3 +7,6 @@ Päivä | Tunnit | Kuvaus
 25.05.2016 | 5h | Testejä, pit, checkstyle, luokkakaavio
 01.06.2016 | 10h | Teksikäyttöliittymän teko ja logiikan täydennystä
 02.06.2016 | 6h | Testien täydennystä ja dokumentaation päivitys
+07.06.2016 | 6h | Java swingin opiskelua
+08.06.2016 | 5h | Java swingin harjoittelua
+09.06.2016 | 7h | Alustavan graafisen käyttöliittymän teko
