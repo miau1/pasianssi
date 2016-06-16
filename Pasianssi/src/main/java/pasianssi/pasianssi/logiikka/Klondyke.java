@@ -49,7 +49,7 @@ public class Klondyke extends Peli {
         this.alustaAlkupakka();
         this.alustaAlapakat();
     }
-    
+
     /**
      * Alustaa 7 alapakkaa jakamalla niihin 1-7 korttia järjestyksessä, ja
      * kääntää pakkojen päällimmäiset kortit kuvapuoli ylöspäin.
@@ -89,26 +89,22 @@ public class Klondyke extends Peli {
      */
     private void siirraKorttejaAla(Pakka mista, Pakka mihin, int maara) {
         Pakka pak = mista.poistaKortteja(maara);
-        if (pak.paallimmainen().getPuoli() == 1) {
-            if (mihin.koko() == 0) {
-                if (pak.paallimmainen().getNumero() == 13) {
-                    mihin.lisaaKortteja(pak);
-                    this.kaantoapu(mista);
-                } else {
-                    mista.lisaaKortteja(pak);
-                }
+        if (mihin.koko() == 0) {
+            if (pak.paallimmainen().getNumero() == 13 && pak.paallimmainen().getPuoli() == 1) {
+                mihin.lisaaKortteja(pak);
+                this.kaantoapu(mista);
             } else {
-                if ((mihin.paallimmainen().getNumero() - pak.paallimmainen().getNumero() == 1
-                        && mihin.paallimmainen().getVari() - pak.paallimmainen().getVari() != 0)) {
-                    mihin.lisaaKortteja(pak);
-                    this.kaantoapu(mista);
-                } else {
-                    mista.lisaaKortteja(pak);
-                }
+                mista.lisaaKortteja(pak);
             }
-
         } else {
-            mista.lisaaKortteja(pak);
+            if (mihin.paallimmainen().getNumero() - pak.paallimmainen().getNumero() == 1
+                    && mihin.paallimmainen().getVari() - pak.paallimmainen().getVari() != 0
+                    && pak.paallimmainen().getPuoli() == 1) {
+                mihin.lisaaKortteja(pak);
+                this.kaantoapu(mista);
+            } else {
+                mista.lisaaKortteja(pak);
+            }
         }
     }
 

@@ -11,7 +11,6 @@ public class Kortti {
     private int maa;
     private int vari;
     private int puoli;
-    private String kuva;
 
     /**
      * Luo uuden kortin annetun numeron ja maan perusteella. Puoli on aluksi 0
@@ -25,7 +24,6 @@ public class Kortti {
         this.maa = maa;
         vari = maa % 2;
         this.puoli = 0;
-        this.kuva = kuvanOsoite(numero, maa);
     }
 
     /**
@@ -74,39 +72,24 @@ public class Kortti {
     }
 
     /**
-     * Palauttaa kortin kuvan osoitteen.
+     * Määrittää kuvan sijainnin PasianssiGUI luokan kuvat taulukossa maan ja 
+     * numeron perusteella.
      *
-     * @return Kuvan osoite
+     * @param num
+     * @param maa
+     * @return Kuvan sijainti
      */
-    public String getKuva() {
+    public int kuva() {
+        int kuva = 0;
+        kuva = kuva + 13 * maa + numero - 13;
         return kuva;
     }
 
     /**
-     * Määrittää kuvan osoitteen maan ja numeron perusteella.
-     *
-     * @param num
-     * @param maa
-     * @return Kuvan osoite
+     * Palauttaa kortin string-muodossa.
+     * 
+     * @return kortin string-muoto
      */
-    private String kuvanOsoite(int num, int maa) {
-        String osoite = "src/main/resources/images/kortit/Cards/Classic/";
-        if (maa == 1) {
-            osoite = osoite + "h";
-        } else if (maa == 2) {
-            osoite = osoite + "s";
-        } else if (maa == 3) {
-            osoite = osoite + "d";
-        } else if (maa == 4) {
-            osoite = osoite + "c";
-        }
-        if (num < 10) {
-            osoite = osoite + "0";
-        }
-        osoite = osoite + Integer.toString(num) + ".png";
-        return osoite;
-    }
-
     public String toString() {
         String maa2 = "";
         if (this.maa == 1) {

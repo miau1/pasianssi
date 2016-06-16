@@ -15,6 +15,8 @@ public class Pakka {
 
     /**
      * Luo uuden tyhjän pakan.
+     * 
+     * @param tunnus Pakan tyyppitunnus
      */
     public Pakka(int tunnus) {
         kortit = new Stack<>();
@@ -41,9 +43,9 @@ public class Pakka {
     }
 
     /**
-     * Lisää kortin pakan päälle, lisäämällä sen pinoon "kortit"
-     *
-     * @param k
+     * Lisää kortin pakan päälle, lisäämällä sen pinoon "kortit".
+     * 
+     * @param k Lisättävä kortti
      */
     public void lisaaKortti(Kortti k) {
         kortit.push(k);

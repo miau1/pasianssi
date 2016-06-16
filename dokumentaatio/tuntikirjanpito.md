@@ -10,3 +10,6 @@ Päivä | Tunnit | Kuvaus
 07.06.2016 | 6h | Java swingin opiskelua
 08.06.2016 | 5h | Java swingin harjoittelua
 09.06.2016 | 7h | Alustavan graafisen käyttöliittymän teko
+14.06.2016 | 7h | Parempi graafinen käyttöliittymä
+15.06.2016 | 8h | Vielä parempi graafinen käyttöliittymä
+16.06.2016 | 3h | Sekvenssikaaviot ja dokumentaation päivitys
