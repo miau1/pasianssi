@@ -21,7 +21,7 @@ public class OhjeFrame extends JFrame{
     
     public OhjeFrame(){
         this.setTitle("Ohje");
-        this.setSize(500, 350);
+        this.setSize(500, 500);
         ohjeArea = new JTextArea("Pasianssi:"
                 + "\nPelin tarkoituksena on siirtää kaikki pakan kortit maittain ylhäällä oleviin"
                 + "\npakkoihin järjestyksessä alkaen ässästä ja päättyen kuninkaaseen. Voit"
