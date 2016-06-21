@@ -43,9 +43,15 @@ public class Klondyke extends Peli {
     }
 
     /**
-     * Alustaa alkupakan ja alapakat.
+     * Alustaa alkupakan ja alapakat ja asettaa vaikeustason.
+     *
+     * @param vaikeustaso Pelin vaikeustaso
      */
-    public void alustaPeli() {
+    public void alustaPeli(int vaikeustaso) {
+        super.vaikeustaso = vaikeustaso;
+        if (vaikeustaso == 3) {
+            super.kierrosraja = 3;
+        }
         this.alustaAlkupakka();
         this.alustaAlapakat();
     }
@@ -131,9 +137,9 @@ public class Klondyke extends Peli {
     }
 
     /**
-     * Kääntää pakan "mihin" päällimmäisen kortin, jos "mihin" on alapakka.
+     * Kääntää pakan "mista" päällimmäisen kortin, jos "mista" on alapakka.
      *
-     * @param mihin Pakka, josta siirretään.
+     * @param mista Pakka, josta siirretään.
      */
     private void kaantoapu(Pakka mista) {
         if (mista.getTunnus() == 3 && mista.koko() > 0) {

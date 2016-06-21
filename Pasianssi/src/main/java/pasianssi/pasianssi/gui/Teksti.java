@@ -23,8 +23,7 @@ public class Teksti {
     public Teksti() {
         sc = new Scanner(System.in);
         kl = new Klondyke();
-        kl.alustaAlkupakka();
-        kl.alustaAlapakat();
+        kl.alustaPeli(3);
         jatketaanko = true;
     }
 
@@ -53,6 +52,7 @@ public class Teksti {
      */
     public void kaantopakka() {
         System.out.print("Kääntopakassa on: ");
+        System.out.println(kl.getKaanto().koko());
         if (kl.getKaanto().koko() == 0) {
             System.out.println("0 korttia.");
         } else {

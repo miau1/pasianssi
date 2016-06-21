@@ -6,10 +6,12 @@ package pasianssi.pasianssi.logiikka;
  *
  * @author mikko
  */
-public class Peli {
+public abstract class Peli {
 
     private Pakka alku;
     private Pakka kaanto;
+    public int vaikeustaso;
+    public int kierrosraja;
 
     /**
      * Luo uuden pelialustan ja luo alku- ja kääntöpakat.
@@ -56,12 +58,48 @@ public class Peli {
      * kääntopakkaa.
      */
     public void korttiAlustaKaantoon() {
+        if (vaikeustaso == 1) {
+            yksiKortti();
+        } else if (vaikeustaso == 2) {
+            if (alku.koko() == 0) {
+                this.uusiKierros();
+            } else {
+                kolmeKorttia();
+            }
+        } else if (vaikeustaso == 3) {
+            if (alku.koko() == 0) {
+                this.uusiKierros();
+                kierrosraja--;
+            } else {
+                if (kierrosraja > 0) {
+                    kolmeKorttia();
+                }
+            }
+        }
+    }
+
+    /**
+     * Poistaa kortin alkupakasta, kääntää sen kuvapuoli ylöspäin, ja lisää sen
+     * kääntopakkaa.
+     */
+    private void yksiKortti() {
         if (alku.koko() > 0) {
             Kortti k = alku.poistaKortti();
             k.kaanna();
             kaanto.lisaaKortti(k);
         } else {
             this.uusiKierros();
+        }
+    }
+
+    /**
+     * Kääntää kolmekorttia.
+     */
+    private void kolmeKorttia() {
+        for (int i = 0; i < 3; i++) {
+            if (alku.koko() != 0) {
+                yksiKortti();
+            }
         }
     }
 

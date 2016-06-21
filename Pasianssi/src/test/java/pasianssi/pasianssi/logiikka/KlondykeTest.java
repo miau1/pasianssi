@@ -25,8 +25,72 @@ public class KlondykeTest {
         kl = new Klondyke();
     }
 
+
+    @Test
+    public void alustaAlkupakkaAlustaaPakanOikein() {
+        kl.alustaAlkupakka();
+        assertEquals(52, kl.getAlku().koko());
+        assertEquals(0, kl.getKaanto().koko());
+    }
+
+    @Test
+    public void alustaAlkupakkaSekoittaaAlkupakan() {
+        kl.alustaAlkupakka();
+        boolean ret = false;
+        for (int i = 4; i >= 1; i--) {
+            for (int j = 13; j >= 1; j--) {
+                Kortti k1 = kl.getAlku().poistaKortti();
+                if (k1.getNumero() != j || k1.getMaa() != i) {
+                    ret = true;
+                }
+            }
+
+        }
+        assertEquals(true, ret);
+    }
+
+    @Test
+    public void korttiAlustaKaantoonSiirtaaKortinAlustaKaantoonOikeinpain() {
+        kl.alustaAlkupakka();
+        kl.korttiAlustaKaantoon();
+        assertEquals(51, kl.getAlku().koko());
+        assertEquals(1, kl.getKaanto().koko());
+        assertEquals(1, kl.getKaanto().paallimmainen().getPuoli());
+        kl.korttiAlustaKaantoon();
+        assertEquals(50, kl.getAlku().koko());
+        assertEquals(2, kl.getKaanto().koko());
+        assertEquals(1, kl.getKaanto().paallimmainen().getPuoli());
+    }
+
+    @Test
+    public void korttiAlustaKaantoonAloittaaUudenKierroksenJosAlkupakkaLoppuu() {
+        kl.alustaAlkupakka();
+        for (int i = 0; i < 53; i++) {
+            kl.korttiAlustaKaantoon();
+        }
+        assertEquals(52, kl.getAlku().koko());
+        assertEquals(0, kl.getKaanto().koko());
+    }
+
+    @Test
+    public void uudenKierroksenAloittaminenKaantaaKortitOikeinpainAlkupakkaan() {
+        kl.alustaAlkupakka();
+        for (int i = 0; i < 53; i++) {
+            kl.korttiAlustaKaantoon();
+        }
+        boolean ret = true;
+        for (Kortti k : kl.getAlku().getKortit()) {
+            if (k.getPuoli() == 1) {
+                ret = false;
+            }
+        }
+        assertEquals(true, ret);
+    }
+
     @Test
     public void konstruktoriLuoTarvittavatTyhjatPakat() {
+        assertEquals(0, kl.getAlku().koko());
+        assertEquals(0, kl.getKaanto().koko());
         for (int i = 0; i < kl.getAlapakat().length; i++) {
             assertEquals(0, kl.getAlapakat()[i].koko());
         }
