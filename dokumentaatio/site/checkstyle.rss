@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2016</copyright>
     <item>
-      <title>File: 7,
+      <title>File: 17,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -46,7 +46,21 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.logiikka.Kortti.java">pasianssi/pasianssi/logiikka/Kortti.java</a>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.Nappipaneeli.java">pasianssi/pasianssi/gui/Nappipaneeli.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.Pelipaneeli.java">pasianssi/pasianssi/gui/Pelipaneeli.java</a>
                 </td>
                 <td>
                   0
@@ -61,6 +75,104 @@ under the License.
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.logiikka.Pakka.java">pasianssi/pasianssi/logiikka/Pakka.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.VoittoFrame.java">pasianssi/pasianssi/gui/VoittoFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.LatausFrame.java">pasianssi/pasianssi/gui/LatausFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.logiikka.Klondyke.java">pasianssi/pasianssi/logiikka/Klondyke.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.SiirtoListener.java">pasianssi/pasianssi/gui/SiirtoListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.OhjeFrame.java">pasianssi/pasianssi/gui/OhjeFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.ImageHandler.java">pasianssi/pasianssi/gui/ImageHandler.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.logiikka.Kortti.java">pasianssi/pasianssi/logiikka/Kortti.java</a>
                 </td>
                 <td>
                   0
@@ -102,7 +214,35 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.logiikka.Klondyke.java">pasianssi/pasianssi/logiikka/Klondyke.java</a>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.Ylapaneeli.java">pasianssi/pasianssi/gui/Ylapaneeli.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.MainFrame.java">pasianssi/pasianssi/gui/MainFrame.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#pasianssi.pasianssi.gui.Alapaneeli.java">pasianssi/pasianssi/gui/Alapaneeli.java</a>
                 </td>
                 <td>
                   0

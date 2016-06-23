@@ -50,7 +50,7 @@ public class Klondyke extends Peli {
     public void alustaPeli(int vaikeustaso) {
         super.vaikeustaso = vaikeustaso;
         if (vaikeustaso == 3) {
-            super.kierrosraja = 3;
+            super.kierrosraja = 2;
         }
         this.alustaAlkupakka();
         this.alustaAlapakat();

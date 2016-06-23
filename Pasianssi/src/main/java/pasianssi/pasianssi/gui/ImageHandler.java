@@ -13,7 +13,7 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
 /**
- *
+ * Luokka hakee kuvat muistista ja tarjoaa metodin kuvan käyttämiseen.
  * @author mikko
  */
 public class ImageHandler {
@@ -22,10 +22,11 @@ public class ImageHandler {
     
     public ImageHandler() throws IOException{
         kuvat = new ImageIcon[106];
-        BufferedImage myPicture1 = ImageIO.read(new File("src/main/resources/images/kortit/Backs/Card-Back-01.png"));
+        // Lisää osoitteen eteen "src/main/resources/" jos haluat ajaa ohjelman ide:ssä.
+        BufferedImage myPicture1 = ImageIO.read(new File("images/kortit/Backs/Card-Back-01.png"));
         kuvat[0] = new ImageIcon(myPicture1.getScaledInstance(70, 95, SCALE_SMOOTH));
         for (int i = 1; i < 53; i++) {
-            String osoite = "src/main/resources/images/kortit/Cards/Classic/";
+            String osoite = "images/kortit/Cards/Classic/";
             if (i < 14) {
                 osoite = osoite + "h" + rakennaLuku(i);
             } else if (i > 13 && i < 27) {
@@ -40,7 +41,7 @@ public class ImageHandler {
             kuvat[i] = new ImageIcon(myPicture1.getScaledInstance(70, 95, SCALE_SMOOTH));
             kuvat[i + 52] = new ImageIcon(myPicture1.getSubimage(0, 0, 768, 250).getScaledInstance(70, 25, SCALE_SMOOTH));
         }
-        myPicture1 = ImageIO.read(new File("src/main/resources/images/kortit/Backs/pohja.png"));
+        myPicture1 = ImageIO.read(new File("images/kortit/Backs/pohja.png"));
         kuvat[105] = new ImageIcon(myPicture1.getScaledInstance(70, 95, SCALE_SMOOTH));
     }
     

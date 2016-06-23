@@ -59,7 +59,11 @@ public abstract class Peli {
      */
     public void korttiAlustaKaantoon() {
         if (vaikeustaso == 1) {
-            yksiKortti();
+            if (alku.koko() == 0) {
+                this.uusiKierros();
+            } else {
+                yksiKortti();
+            }
         } else if (vaikeustaso == 2) {
             if (alku.koko() == 0) {
                 this.uusiKierros();
@@ -67,33 +71,27 @@ public abstract class Peli {
                 kolmeKorttia();
             }
         } else if (vaikeustaso == 3) {
-            if (alku.koko() == 0) {
+            if (alku.koko() == 0 && kierrosraja > 0) {
                 this.uusiKierros();
                 kierrosraja--;
             } else {
-                if (kierrosraja > 0) {
-                    kolmeKorttia();
-                }
+                kolmeKorttia();
             }
         }
     }
 
     /**
      * Poistaa kortin alkupakasta, kääntää sen kuvapuoli ylöspäin, ja lisää sen
-     * kääntopakkaa.
+     * kääntopakkaan.
      */
     private void yksiKortti() {
-        if (alku.koko() > 0) {
-            Kortti k = alku.poistaKortti();
-            k.kaanna();
-            kaanto.lisaaKortti(k);
-        } else {
-            this.uusiKierros();
-        }
+        Kortti k = alku.poistaKortti();
+        k.kaanna();
+        kaanto.lisaaKortti(k);
     }
 
     /**
-     * Kääntää kolmekorttia.
+     * Siirtä kolme korttia alkupakasta kääntöpakkaan.
      */
     private void kolmeKorttia() {
         for (int i = 0; i < 3; i++) {

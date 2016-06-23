@@ -12,7 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- *
+ * Pelialusta, joka sisältää kaikki kortit ja muut napit.
  * @author mikko
  */
 public class Pelipaneeli extends JPanel {

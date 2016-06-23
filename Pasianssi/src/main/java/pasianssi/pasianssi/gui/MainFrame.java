@@ -20,7 +20,7 @@ import pasianssi.pasianssi.logiikka.Klondyke;
 import pasianssi.pasianssi.logiikka.Pakka;
 
 /**
- *
+ * Pääfreimi, joka sisältää kaikki pakat ja napit.
  * @author mikko
  */
 public class MainFrame extends JFrame {
@@ -31,6 +31,7 @@ public class MainFrame extends JFrame {
 
     private VoittoFrame voittof;
     private OhjeFrame ohjef;
+    private LatausFrame lat;
 
     private Pelipaneeli peli;
     private Ylapaneeli yla;
@@ -45,6 +46,9 @@ public class MainFrame extends JFrame {
     private long kello;
 
     public MainFrame() throws IOException {
+        lat = new LatausFrame();
+        lat.setVisible(true);
+        
         this.setTitle("Pasianssi");
         this.setSize(1000, 700);
 
@@ -68,6 +72,7 @@ public class MainFrame extends JFrame {
 
         lisaaKuuntelijat();
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        lat.setVisible(false);
         this.setVisible(true);
 
         kello = System.currentTimeMillis();

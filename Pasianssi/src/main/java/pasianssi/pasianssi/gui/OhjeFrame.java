@@ -12,7 +12,8 @@ import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 
 /**
- *
+ * Näyttää pelin ohjeet.
+ * 
  * @author mikko
  */
 public class OhjeFrame extends JFrame{
@@ -31,7 +32,7 @@ public class OhjeFrame extends JFrame{
                 + "\n\nSiirrot:"
                 + "\nKlikkaa ensin korttia, jonka haluat siirtää, ja sen jälkeen korttia, jonka"
                 + "\npäälle haluat siirtää. Jos siirto ei onnistu, vaikka sen pitäisi, tuplaklikkaa"
-                + "\nkorttia, jota haluat siirtää, sillä olet todennälöisesti valinnut vahingossa"
+                + "\nkorttia, jota haluat siirtää, sillä olet todennäköisesti valinnut vahingossa"
                 + "\nvälissä jonkun toisen kortin siirrettäväksi."
                 + "\n\nVaikeustaso:"
                 + "\nJos haluat vaihtaa vaikeustasoa, paina vaikeustasonappia ja aloita uusi peli."

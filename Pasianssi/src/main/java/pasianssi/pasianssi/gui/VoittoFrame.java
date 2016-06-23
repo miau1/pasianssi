@@ -11,7 +11,9 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 /**
- *
+ * Freimi, joka näyttää onnittelutekstin ja peliin kuluneen ajan, kun peli on
+ * voitettu.
+ * 
  * @author mikko
  */
 public class VoittoFrame extends JFrame{

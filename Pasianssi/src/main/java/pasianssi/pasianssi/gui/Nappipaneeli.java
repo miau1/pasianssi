@@ -13,7 +13,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- *
+ * Paneeli sisältää napit uuden pelin aloittamiselle, vaikeustason vaihtamiselle,
+ * ja ohjeiden näyttämiselle.
+ * 
  * @author mikko
  */
 public class Nappipaneeli extends JPanel {

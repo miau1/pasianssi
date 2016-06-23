@@ -53,7 +53,7 @@ public class Kortti {
     }
 
     /**
-     * Palauttaa kortin varin. 0 = musta ja 1 = punainen.
+     * Palauttaa kortin värin. 0 = musta ja 1 = punainen.
      *
      * @return Kortin vari.
      */
@@ -72,7 +72,7 @@ public class Kortti {
     }
 
     /**
-     * Määrittää kuvan sijainnin PasianssiGUI luokan kuvat taulukossa maan ja 
+     * Määrittää kuvan sijainnin ImageHandler luokan kuvat taulukossa maan ja 
      * numeron perusteella.
      *
      * @param num

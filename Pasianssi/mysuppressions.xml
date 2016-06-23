@@ -8,5 +8,15 @@
     <suppress files="Main.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="Teksti.java" checks="[a-zA-Z0-9]*"/>
     <suppress files="PasianssiUI.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="Alapaneeli.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="ImageHandler.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="MainFrame.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="Nappipaneeli.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="OhjeFrame.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="Pelipaneeli.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="SiirtoListener.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="VoittoFrame.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="Ylapaneeli.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="LatausFrame.java" checks="[a-zA-Z0-9]*"/>
 </suppressions>
   

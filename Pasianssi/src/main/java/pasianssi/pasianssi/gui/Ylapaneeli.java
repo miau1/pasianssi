@@ -12,7 +12,8 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 
 /**
- *
+ * Yläpaneeli sisältää kaikki ylhäällä olevat pakat pasianssissa.
+ * 
  * @author mikko
  */
 public class Ylapaneeli extends JPanel {

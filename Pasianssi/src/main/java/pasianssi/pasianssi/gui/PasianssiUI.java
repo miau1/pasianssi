@@ -4,7 +4,8 @@ package pasianssi.pasianssi.gui;
 import java.io.IOException;
 
 /**
- *
+ * Käyttöliittymän pääluokka.
+ * 
  * @author mikko
  */
 public class PasianssiUI implements Runnable {

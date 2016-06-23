@@ -16,7 +16,9 @@ import javax.swing.JButton;
 import pasianssi.pasianssi.logiikka.Pakka;
 
 /**
- *
+ * Luokka kuuntelee pelaajan siirtoja ja tekee niiden perusteella eri toimen-
+ * piteitä.
+ * 
  * @author mikko
  */
 public class SiirtoListener implements ActionListener {
@@ -100,7 +102,7 @@ public class SiirtoListener implements ActionListener {
                     asetaKuva(main.getK().getYlapakat()[pakka], main.getYlat()[pakka + 2]);
                     main.getTestiP().setText(main.getTestiS());
                     if (main.getK().tarkistaVoitto()) {
-                        main.getVoittof().vaihdaTeksti("Voitit pelin, onneksi olkoon!\nAikasi: " + Long.toString((System.currentTimeMillis() - main.getKello()) / 1000) + " sekuntia");
+                        main.getVoittof().vaihdaTeksti("Voitit pelin, onneksi olkoon! Aikasi: " + Long.toString((System.currentTimeMillis() - main.getKello()) / 1000) + " sekuntia");
                         main.getVoittof().setVisible(true);
                     }
                 } else if (command.startsWith("ala")) {

@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fi_FI" lang="fi_FI">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>OhjeFrame xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../apidocs/pasianssi/pasianssi/gui/OhjeFrame.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <em class="jxr_comment"> * To change this license header, choose License Headers in Project Properties.</em>
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_comment"> * To change this template file, choose Tools | Templates</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_comment"> * and open the template in the editor.</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">package</strong> pasianssi.pasianssi.gui;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.awt.event.WindowAdapter;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.awt.event.WindowEvent;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> javax.swing.JFrame;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> javax.swing.JTextArea;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> javax.swing.WindowConstants;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_javadoccomment"> * Näyttää pelin ohjeet.</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment"> * </em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment"> * @author mikko</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../pasianssi/pasianssi/gui/OhjeFrame.html">OhjeFrame</a> <strong class="jxr_keyword">extends</strong> JFrame{
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>      
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <strong class="jxr_keyword">private</strong> JTextArea ohjeArea;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      <strong class="jxr_keyword">public</strong> <a href="../../../pasianssi/pasianssi/gui/OhjeFrame.html">OhjeFrame</a>(){
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          <strong class="jxr_keyword">this</strong>.setTitle(<span class="jxr_string">"Ohje"</span>);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          <strong class="jxr_keyword">this</strong>.setSize(500, 500);
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          ohjeArea = <strong class="jxr_keyword">new</strong> JTextArea(<span class="jxr_string">"Pasianssi:"</span>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>                  + <span class="jxr_string">"\nPelin tarkoituksena on siirtää kaikki pakan kortit maittain ylhäällä oleviin"</span>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>                  + <span class="jxr_string">"\npakkoihin järjestyksessä alkaen ässästä ja päättyen kuninkaaseen. Voit"</span>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>                  + <span class="jxr_string">"\nrakentaa korttikasoja pakan päällimmäisestä kortista ja alhaalla olevien"</span>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>                  + <span class="jxr_string">"\npakkojen korteista siten, että kasan joka toinen kortti on erivärinen ja että"</span>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>                  + <span class="jxr_string">"\nalla oleva kortti on aina yhden suurempi kuin sen päälle tuleva kortti."</span>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>                  + <span class="jxr_string">"\n\nSiirrot:"</span>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>                  + <span class="jxr_string">"\nKlikkaa ensin korttia, jonka haluat siirtää, ja sen jälkeen korttia, jonka"</span>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>                  + <span class="jxr_string">"\npäälle haluat siirtää. Jos siirto ei onnistu, vaikka sen pitäisi, tuplaklikkaa"</span>
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>                  + <span class="jxr_string">"\nkorttia, jota haluat siirtää, sillä olet todennäköisesti valinnut vahingossa"</span>
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>                  + <span class="jxr_string">"\nvälissä jonkun toisen kortin siirrettäväksi."</span>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>                  + <span class="jxr_string">"\n\nVaikeustaso:"</span>
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>                  + <span class="jxr_string">"\nJos haluat vaihtaa vaikeustasoa, paina vaikeustasonappia ja aloita uusi peli."</span>
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>                  + <span class="jxr_string">"\n\nHelpolla pakasta vedetään yksi kortti kerrallaan, ja pakan voi käydä läpi"</span>
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>                  + <span class="jxr_string">"\nniin monta kertaa kuin haluaa."</span>
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>                  + <span class="jxr_string">"\n\nKeskitasolla pakasta vedetään kolme korttia, ja pakkaa voi yhä käydä läpi"</span>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>                  + <span class="jxr_string">"\nloputtomasti."</span>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>                  + <span class="jxr_string">"\n\nVaikealla vedetään kolme korttia, ja pakan voi käydä läpi kolme kertaa."</span>);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          ohjeArea.setEditable(false);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <strong class="jxr_keyword">this</strong>.add(ohjeArea);
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <strong class="jxr_keyword">this</strong>.setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          <strong class="jxr_keyword">this</strong>.setVisible(false);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      }
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2016. All rights reserved.</div>
+</body>
+</html>

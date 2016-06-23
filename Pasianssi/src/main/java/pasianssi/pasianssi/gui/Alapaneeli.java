@@ -16,7 +16,8 @@ import pasianssi.pasianssi.logiikka.Kortti;
 import pasianssi.pasianssi.logiikka.Pakka;
 
 /**
- *
+ * Alapaneeli sisältää pelin alapakkojen esitykset.
+ * 
  * @author mikko
  */
 public class Alapaneeli extends JPanel {

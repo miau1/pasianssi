@@ -51,13 +51,13 @@ public class KlondykeTest {
 
     @Test
     public void korttiAlustaKaantoonSiirtaaKortinAlustaKaantoonOikeinpain() {
-        kl.alustaAlkupakka();
+        kl.alustaPeli(1);
         kl.korttiAlustaKaantoon();
-        assertEquals(51, kl.getAlku().koko());
+        assertEquals(23, kl.getAlku().koko());
         assertEquals(1, kl.getKaanto().koko());
         assertEquals(1, kl.getKaanto().paallimmainen().getPuoli());
         kl.korttiAlustaKaantoon();
-        assertEquals(50, kl.getAlku().koko());
+        assertEquals(22, kl.getAlku().koko());
         assertEquals(2, kl.getKaanto().koko());
         assertEquals(1, kl.getKaanto().paallimmainen().getPuoli());
     }
@@ -437,5 +437,71 @@ public class KlondykeTest {
         kl.siirraKortteja(p3, p1, 1);
         assertEquals(1, p3.koko());
         assertEquals(1, p3.paallimmainen().getPuoli());
+    }
+    
+    @Test
+    public void vaikeustasolla2TuleeKolmeKorttiaJa8AloittaaUudenKierroksen() {
+        kl.alustaPeli(2);
+        kl.korttiAlustaKaantoon();
+        assertEquals(21, kl.getAlku().koko());
+        for (int i = 0; i < 7; i++) {
+            kl.korttiAlustaKaantoon();
+        }
+        assertEquals(0, kl.getAlku().koko());
+        kl.korttiAlustaKaantoon();
+        assertEquals(24, kl.getAlku().koko());
+    }
+    
+    @Test
+    public void vaikeustasolla3TuleeKolmeKorttiaJaVoiMennaKolmeKierrostaJa8AloittaaUudenKierroksen() {
+        kl.alustaPeli(3);
+        kl.korttiAlustaKaantoon();
+        assertEquals(21, kl.getAlku().koko());
+        for (int i = 0; i < 7; i++) {
+            kl.korttiAlustaKaantoon();
+        }
+        assertEquals(0, kl.getAlku().koko());
+        kl.korttiAlustaKaantoon();
+        assertEquals(24, kl.getAlku().koko());
+        for (int i = 0; i < 18; i++) {
+            kl.korttiAlustaKaantoon();
+        }
+        assertEquals(0, kl.getAlku().koko());
+        kl.korttiAlustaKaantoon();
+        assertEquals(0, kl.getAlku().koko());
+    }
+    
+    @Test
+    public void vaikeustaso3AsettaaKierrosrajaksiKolme() {
+        kl.alustaPeli(1);
+        assertEquals(0, kl.kierrosraja);
+        kl.tyhjennaKaikki();
+        kl.alustaPeli(2);
+        assertEquals(0, kl.kierrosraja);
+        kl.tyhjennaKaikki();
+        kl.alustaPeli(3);
+        assertEquals(2, kl.kierrosraja);
+    }
+    
+    @Test
+    public void vaikeustasolla1UusikierrosAlkaaKunAlkupakkaLoppuu() {
+        kl.alustaPeli(1);
+        kl.korttiAlustaKaantoon();
+        assertEquals(23,kl.getAlku().koko());
+        for (int i = 0; i < 23; i++) {
+            kl.korttiAlustaKaantoon();
+        }
+        assertEquals(0,kl.getAlku().koko());
+        kl.korttiAlustaKaantoon();
+        assertEquals(24,kl.getAlku().koko());
+    }
+    
+    @Test
+    public void uudenKierroksenAlkaessaKortiKaantyvatOikeinpain() {
+        kl.alustaPeli(1);
+        for (int i = 0; i < 25; i++) {
+            kl.korttiAlustaKaantoon();
+        }
+        assertEquals(0, kl.getAlku().paallimmainen().getPuoli());
     }
 }

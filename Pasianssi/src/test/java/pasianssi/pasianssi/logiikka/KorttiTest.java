@@ -45,4 +45,22 @@ public class KorttiTest {
         k.kaanna();
         assertEquals(0, k.getPuoli());
     }
+    
+    @Test
+    public void korttiAntaaOikeanKuvanSijainnin() {
+        assertEquals(1, k.kuva());
+        Kortti k2 = new Kortti(10, 4);
+        assertEquals(49, k2.kuva());
+    }
+    
+    @Test
+    public void korttiAntaaOikeanStringmuodon() {
+        assertEquals("Hertta 1", k.toString());
+        Kortti k2 = new Kortti(1, 2);
+        assertEquals("Pata 1", k2.toString());
+        Kortti k3 = new Kortti(1, 3);
+        assertEquals("Ruutu 1", k3.toString());
+        Kortti k4 = new Kortti(1, 4);
+        assertEquals("Risti 1", k4.toString());
+    }
 }

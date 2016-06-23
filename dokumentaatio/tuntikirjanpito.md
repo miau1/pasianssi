@@ -13,3 +13,5 @@ Päivä | Tunnit | Kuvaus
 14.06.2016 | 7h | Parempi graafinen käyttöliittymä
 15.06.2016 | 8h | Vielä parempi graafinen käyttöliittymä
 16.06.2016 | 3h | Sekvenssikaaviot ja dokumentaation päivitys
+21.06.2016 | 9h | GUI:n siistimistä, ominaisuuksien lisäämistä
+23.06.2016 | 4h | Testien ja dokumentaation viimeistely, jarin luonti
